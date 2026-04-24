@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Brexo da Deusa | Brechó Sustentável - Timon MA</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fef7f2;
+            color: #2d2a24;
+            scroll-behavior: smooth;
+        }
+
+        .top-bar {
+            background-color: #2c1a12;
+            color: #f9e2cf;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1.2rem 5%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border-bottom: 1px solid #f3e1d2;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #b45f3b;
+            letter-spacing: -0.5px;
+        }
+
+        .logo p {
+            font-size: 0.7rem;
+            color: #8b6b4f;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #3b2a1f;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #b45f3b;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #fae6db 0%, #fff3ea 100%);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.4rem;
+            font-family: 'Playfair Display', serif;
+            color: #4b2a1a;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: #5f4230;
+        }
+
+        .section {
+            padding: 3rem 5%;
+            border-bottom: 1px solid #f3e1d2;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #3c2a20;
+            display: inline-block;
+            border-left: 5px solid #c97e5a;
+            padding-left: 18px;
+        }
+
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem;
+            flex: 1 1 260px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f3e0d4;
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: #b45f3b;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-card h3 {
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .horario-destaque {
+            font-weight: 600;
+            color: #4b2e1c;
+        }
+
+        .catalogo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .cat-item {
+            background: white;
+            border-radius: 2rem;
+            padding: 0.8rem 0.5rem;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border: 1px solid #ffe0d0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.1s;
+        }
+
+        .cat-item span:first-child {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .preco-badge {
+            background: #f5e2d6;
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .promo-box {
+            background: #f2e0d4;
+            padding: 1.5rem;
+            border-radius: 32px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .promo-highlight {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #a5401a;
+        }
+
+        .faixa-preco {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .tamanho-misto {
+            background: #fff0e8;
+            border-radius: 30px;
+            padding: 0.6rem 1.5rem;
+            display: inline-block;
+        }
+
+        .btn-wpp {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-wpp:hover {
+            background-color: #1da85c;
+            transform: scale(1.02);
+        }
+
+        .contato-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            background: #fff;
+            border-radius: 60px;
+            padding: 12px 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #3b2a1f;
+            border: 1px solid #eedbcb;
+            transition: 0.2s;
+        }
+
+        .social-icon i {
+            font-size: 1.4rem;
+        }
+
+        .social-icon:hover {
+            background: #f5e3d8;
+            border-color: #c97e5a;
+        }
+
+        .mapa-container {
+            border-radius: 28px;
+            overflow: hidden;
+            max-width: 700px;
+            margin: 1rem auto;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+        }
+
+        iframe {
+            width: 100%;
+            height: 320px;
+            border: 0;
+        }
+
+        footer {
+            background: #2c1a12;
+            color: #e9cfbc;
+            text-align: center;
+            padding: 2rem 5%;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .catalogo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    🌿 Moda circular com história · Peças exclusivas e sustentáveis ♻️ · Timon - MA
+</div>
+
+<div class="navbar">
+    <div class="logo">
+        <h1>Brexo da Deusa</h1>
+        <p>brechó · estilo · consciência</p>
+    </div>
+    <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#contato">Contato</a>
+    </div>
+</div>
+
+<section class="hero">
+    <h2>✨ Roupas com alma, preços com coração ✨</h2>
+    <p>Moda acessível para todas as idades, estilos e corpos. Do recém-nascido ao plus size, masculino, feminino e infantil. Venha garimpar tesouros em Timon!</p>
+    <div class="news-badge">
+        <i class="fas fa-calendar-alt"></i> 📢 NOVIDADES A CADA 15 DIAS! · 2x por mês 
+    </div>
+</section>
+
+<!-- Sobre + horário + localização CORRIGIDA: Rua Cícero Rios, 644, Vila Angélica, Timon MA -->
+<section id="sobre" class="section">
+    <div class="info-grid">
+        <div class="info-card">
+            <i class="fas fa-map-pin"></i>
+            <h3>📍 Onde estamos</h3>
+            <p><strong>Rua Cícero Rios, 644, Vila Angélica</strong><br>Timon - Maranhão (MA)<br>CEP: 65630-000</p>
+            <div class="mapa-container" style="margin-top:12px;">
+                <!-- Mapa com localização correta utilizando link do Google Maps com coordenadas aproximadas da região (Timon/Vila Angélica) e endereço completo -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.243489754247!2d-43.106723!3d-5.089039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7792e8c4e7e6f8b%3A0x1a2b3c4d5e6f7890!2sR.%20C%C3%ADcero%20Rios%2C%20644%20-%20Vila%20Ang%C3%A9lica%2C%20Timon%20-%20MA%2C%2065630-000!5e0!3m2!1spt-BR!2sbr!4v1713977621623!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="font-size:0.8rem; margin-top:10px;">
+                <a href="https://maps.app.goo.gl/4ssQcLfYwMQPz22K6" target="_blank" style="color:#b45f3b; font-weight:500;">🔗 Ver rota no Google Maps ➜</a>
+            </p>
+            <p style="font-size:0.75rem; margin-top:6px;"><i class="fas fa-location-dot"></i> Referência: próximo à UBS Vila Angélica</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h3>🕒 Horário de funcionamento</h3>
+            <p><span class="horario-destaque">Segunda a sábado</span><br>08:30 – 17:30</p>
+            <p style="margin-top: 8px;"><i class="fas fa-truck"></i> <strong>Entregas por conta do cliente:</strong><br> 🕘 9h - 11h  |  🕑 14h - 16h</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-credit-card"></i>
+            <h3>💳 Formas de pagamento</h3>
+            <p>✅ Cartões (todos, exceto Credshop)<br>✅ Pix (à vista)<br>✅ Espécie</p>
+            <p style="margin-top: 8px;"><i class="fas fa-exchange-alt"></i> Trocas consultar condições</p>
+        </div>
+    </div>
+</section>
+
+<!-- Catálogo completo e valores -->
+<section id="catalogo" class="section">
+    <h2 class="section-title">👘 Catálogo de peças</h2>
+    <p style="margin-bottom: 1rem;"><strong>Tamanhos mistos:</strong> do PP ao GG, roupas para recém-nascido, infantil, masculino e feminino.</p>
+    <div class="catalogo-grid">
+        <div class="cat-item"><span>👗 Vestidos</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>👚 Blusas</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>👕 Camisas (Masc/Fem)</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🩳 Bermudas / Shorts</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>👖 Calças jeans/tecido</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🧘 Legging</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🦺 Macacão</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>👗 Saia</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🧦 Meia</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🧣 Gravata / Lenços</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🧢 Touca / Boné</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🛌 Pijama</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🧥 Casaco</span><span class="preco-badge">R$ 5 a 9</span></div>
+        <div class="cat-item"><span>🏖️ Moda praia</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🛏️ Capa travesseiro</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🧺 Pano cozinha / prato</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🪢 Tapete</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>👩‍🍳 Avental</span><span class="preco-badge">R$ 4 a 5</span></div>
+        <div class="cat-item"><span>🎀 Lenços diversos</span><span class="preco-badge">R$ 4 a 5</span></div>
+    </div>
+    <div class="tamanho-misto" style="margin-top: 12px;">
+        🧸 <strong>Roupinhas recém-nascido, infantil, masculino, feminino</strong> — tudo junto no acervo!
+    </div>
+</section>
+
+<!-- Seção promoções e peças especiais -->
+<section id="promocoes" class="section">
+    <h2 class="section-title">🎯 Promoções & peças especiais</h2>
+    <div class="promo-box">
+        <i class="fas fa-tag" style="font-size: 2rem; color:#a5401a;"></i>
+        <h3>🔥 SUPER OFERTA POR QUANTIDADE</h3>
+        <p><strong>A partir de 12 peças → CADA PEÇA SAI POR <span class="promo-highlight">R$ 2,50</span></strong></p>
+        <small>(válido para peças da faixa de R$4-5 e casacos até R$9? sim, promoção geral nos itens do catálogo regular, exceto peças destacadas com valor 5,10,15)</small>
+    </div>
+    
+    <div class="faixa-preco">
+        <div><i class="fas fa-star-of-life"></i> Peças selecionadas especiais <br> <strong>R$ 5,00 | R$ 10,00 | R$ 15,00</strong><br><span style="font-size:0.8rem;">(não entram na promoção de 12 peças)</span></div>
+        <div><i class="fas fa-tshirt"></i> Casacos <br> <strong>R$ 5,00 a R$ 9,00</strong><br><span style="font-size:0.8rem;">(não entram na promoção de 12 peças)</span></div>
+    </div>
+    <p style="background: #f3e1d4; padding: 0.7rem; border-radius: 60px; text-align:center; max-width:500px; margin:auto;">✨ Venha conferir peças vintage e exclusivas, sempre novos lotes em Timon! ✨</p>
+</section>
+
+<!-- Local entrega + redes + whats -->
+<section id="contato" class="section">
+    <h2 class="section-title">📞 Fale com a Deusa</h2>
+    <div class="info-grid" style="margin-bottom: 1rem;">
+        <div class="info-card">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p style="font-size:1.3rem; font-weight:bold;">86 98887-82737</p>
+            <a href="https://wa.me/55869888782737" target="_blank" class="btn-wpp" style="margin-top: 10px; display:inline-flex;"> <i class="fab fa-whatsapp"></i> Enviar mensagem</a>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-truck-fast"></i>
+            <h3>🚐 Entrega (por conta do cliente)</h3>
+            <p><strong>Horários de entrega combinada:</strong><br>09h às 11h e 14h às 16h.</p>
+            <p>Envio por conta e responsabilidade do cliente (Rua Cícero Rios, 644, Vila Angelica, Timon).</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-hashtag"></i>
+            <h3>Redes sociais</h3>
+            <div class="contato-links" style="justify-content: flex-start;">
+                <a href="https://www.instagram.com/gavetaarcodavelhabrecho?igsh=MjNvM3ZidWtjNnYx" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@deusabrexo" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i> TikTok</a>
+            </div>
+            <p style="margin-top: 12px;"><i class="fab fa-tiktok"></i> @deusabrexo  |  <i class="fab fa-instagram"></i> @gavetaarcodavelhabrecho</p>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top: 1rem;">
+        <p><strong>🛍️ Visite a loja física:</strong> Rua Cícero Rios, 644 - Vila Angélica, Timon (MA). Segunda a sábado, 8:30–17:30. Aceitamos todas as bandeiras (exceto Credshop), pix e dinheiro.</p>
+        <p style="margin-top: 0.5rem;">🧡 Peças garimpadas com amor, peças que contam histórias. Venha fazer parte da moda consciente em Timon!</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Brechó Brexo da Deusa - Moda circular, sustentável e acessível | Timon - MA</p>
+    <p style="margin-top: 6px;">📍 Rua Cícero Rios, 644, Vila Angélica - Timon/MA | 📞 (86) 98887-82737</p>
+    <p style="font-size:0.7rem;">*Preços e estoque sujeitos a alteração. Promoção por quantidade válida para peças de até R$5 (regulares), exceto itens especiais de R$5/10/15. Tamanhos mistos para todas as categorias.</p>
+</footer>
+
+</body>
+</html>
