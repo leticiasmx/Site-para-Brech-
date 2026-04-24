@@ -34,5 +34,5 @@ Site institucional e vitrine digital do **Brechó da Deusa**, um brechó sustent
 - 📱 **Design totalmente responsivo** (funciona em celulares, tablets e desktops)
 
 
-##Autora
+## Autora
 Letícia Moura
