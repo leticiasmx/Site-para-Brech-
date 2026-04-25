@@ -1,4 +1,4 @@
-# 👗 Brechó Brexo da Deusa
+# 👗 Site para Brechó
 
 Site institucional e vitrine digital do **Brechó da Deusa**, um brechó sustentável localizado em Timon - MA. O projeto apresenta catálogo de produtos, promoções, localização, horário de funcionamento, formas de pagamento e redes sociais — tudo em uma interface acolhedora e responsiva.
 
